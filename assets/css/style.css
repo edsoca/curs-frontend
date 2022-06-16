@@ -67,7 +67,7 @@ body {
                 -1px 1px 0 #fff;
 }
 
-/* Estils per a la pàgina cv.html */
+/************ CV.HTML *****************/
 
 #index {
     text-align: center;
@@ -79,6 +79,10 @@ body {
     margin: 0 20%;
     font-family: 'Gentium Book Basic', serif;
     font-size: 1.5em;
+}
+
+#curriculum > div > div {
+    padding-left: 5%;
 }
 
 #curriculum h2 {
@@ -100,4 +104,70 @@ body {
 #curriculum li a {
     text-decoration: none;
 }
+
+
+/************ CONTACTE.HTML *****************/
+
+#contingut {
+    width: 100vw;
+}
+
+#formulari {
+    width: 60vw;
+    margin:0 auto;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1.5em;
+}
+
+#formulari ::placeholder {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1em;
+}
+
+.entrada {
+    color:gray;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #CC6666;
+    transition: all 0.3s;
+    padding: 13px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+    margin-bottom: 5px;
+  }
   
+  .entrada:focus { 
+      border:3px solid #CC4949; 
+    }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  [type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#CC6666;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+    margin-top: 10px;
+  }
+  [type="submit"]:hover { 
+      background:#CC4949;
+    }
+
