@@ -1,4 +1,7 @@
+/**************************************/
 /************ GENERAL *****************/
+/**************************************/
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Gentium+Book+Basic:ital@1&display=swap');
 
@@ -67,7 +70,42 @@ body {
                 -1px 1px 0 #fff;
 }
 
+/*Footer*/
+
+footer {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 2rem;
+
+    position: absolute;
+    width: 100vw;
+    height: 55px;
+    bottom:0;
+
+    background: #222222;
+    border: 1px solid #982C2C;
+}
+
+footer img {
+    width: 40px;
+    height: 32px;
+    filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/**************************************/
 /************ CV.HTML *****************/
+/**************************************/
 
 #index {
     text-align: center;
@@ -105,8 +143,9 @@ body {
     text-decoration: none;
 }
 
-
+/********************************************/
 /************ CONTACTE.HTML *****************/
+/********************************************/
 
 #contingut {
     width: 100vw;
@@ -170,4 +209,64 @@ body {
   [type="submit"]:hover { 
       background:#CC4949;
     }
+
+/********************************************/
+/************ INDEX.HTML *****************/
+/********************************************/
+
+#experiencia {
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #222222;
+    padding: 1.5rem;
+}
+
+#coneixements{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+/* Barres de progrés de coneixements */
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="progressbar"] {
+    --size: 8rem;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: var(--nom);
+  }
 
