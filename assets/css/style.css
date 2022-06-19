@@ -84,10 +84,8 @@ footer {
     padding: 0px;
     gap: 2rem;
 
-    position: absolute;
     width: 100vw;
     height: 55px;
-    bottom:0;
 
     background: #222222;
     border: 1px solid #982C2C;
@@ -214,6 +212,12 @@ footer a {
 /************ INDEX.HTML *****************/
 /********************************************/
 
+/* Introducció */
+#int_cont {
+    display: flex;
+    flex-direction: row;
+}
+/* Experiència en llenguatges web */
 #experiencia {
     font-family: 'Fredoka One', cursive;
     display: flex;
@@ -222,6 +226,7 @@ footer a {
     font-size: 2rem;
     background-color: #222222;
     padding: 1.5rem;
+    color: white;
 }
 
 #coneixements{
@@ -268,5 +273,36 @@ footer a {
   div[role="progressbar"]::before {
     counter-reset: percentage var(--value);
     content: var(--nom);
+  }
+
+  /* Aficions */
+
+  #aficions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-family: 'Fredoka One', cursive;
+    column-gap: 3rem;
+    row-gap: 1rem;
+  }
+
+  .subtitol {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .aficio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #CCD1D1;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .aficio img{
+    height: 3rem;
   }
 
