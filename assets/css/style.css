@@ -5,10 +5,10 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Gentium+Book+Basic:ital@1&display=swap');
 
-body {
+body, html {
     margin:0;
     padding:0;
-
+    width: 100vw;
 }
 
 /* Barra de navegació */
@@ -104,6 +104,10 @@ footer a {
     text-decoration: none;
 }
 
+/* Seccions */
+section {
+    padding-bottom: 2rem;
+}
 /**************************************/
 /************ CV.HTML *****************/
 /**************************************/
@@ -234,6 +238,65 @@ footer a {
 #descripcio {
     flex-grow: 2;
 }
+
+/* Projectes */
+
+#proj_list{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1.2em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projecte{
+    width: 20vw;
+    display:flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content:space-between;
+    justify-items: center;
+    text-align: center;
+    justify-self: center;
+    border-radius: 15px;
+    overflow: hidden; /* Perquè la imatge de dintre no se'n surti del border-radius */
+    border: 1px black solid;
+    box-shadow: 0 0 10px black;
+}
+
+.projecte img {
+    height: 25vh;
+    object-fit: none;
+    object-position: center;
+}
+
+a.button {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #222;
+    margin:5px auto;
+    border-radius:0.12em;
+    background-color: #222;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#fff;
+    text-align:center;
+    transition: all 0.2s;
+    width: 60%;
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+a.button:hover{
+    color:#222;
+    background-color:#fff;
+}
+
+.proj_text {
+    padding: 0.5rem;
+}
+
 /* Experiència en llenguatges web */
 #experiencia {
     font-family: 'Fredoka One', cursive;
