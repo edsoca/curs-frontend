@@ -12,6 +12,9 @@ body {
 }
 
 /* Barra de navegació */
+#barnav {
+    width: 100vw;
+}
 
 #barnav ul {
     list-style-type: none;
@@ -48,7 +51,7 @@ body {
 
 #capsalera img {
     height: 30vh;
-    width:95vw;
+    width:92vw;
     object-fit: none;
 
 }
@@ -212,10 +215,24 @@ footer a {
 /************ INDEX.HTML *****************/
 /********************************************/
 
+/* Contingut */
+#contingut_index {
+    padding: 0 3rem;
+}
 /* Introducció */
 #int_cont {
     display: flex;
     flex-direction: row;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1.5rem;
+}
+#int_cont img {
+    align-self: center;
+    height: 15rem;
+}
+
+#descripcio {
+    flex-grow: 2;
 }
 /* Experiència en llenguatges web */
 #experiencia {
