@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pàgina inicial</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/behaviour.js"></script>
 </head>
 <body>
-    <div id="barnav">
-        <ul>
+    <div id="barnav" class="topnav">
+        <ul id="navbar-responsive">
+            <li><a class="icon" onclick="myFunction()">&#9776;</a></li>
+        </ul>
+        <ul id="navbar">
             <li><a href="index.html">Inici</a></li>
             <li><a href="cv.html">Currículum</a></li>
             <li><a href="https://llardeldrac.cat">Els meus projectes</a></li>
@@ -40,21 +44,27 @@
             <div class="subtitol">Els meus projectes</div>
             <div id="proj_list">
                 <div class="projecte">
+                    
                     <img src="https://i.pinimg.com/originals/53/a7/a2/53a7a2a8ba1056ba6a9655b6e7925c9e.jpg" alt="Foto projecte 1">
+                    <div class="proj_nom">El tresor d'Isadora</div>
                     <div class="proj_text">Joc de cerca del tresor per treballar el manegament de fitxers en qualsevol llenguatge de programació. A banda, també es poden practicar altres aspectes com estructures condicionals, iteratives, matrius,...</div>
                     <a class="button" href="https://tresor.llardeldrac.cat">Veure més</a>
                 </div>
 
                 <div class="projecte">
+                    
                     <img src="https://wallpaperaccess.com/full/2467256.jpg" alt="Foto projecte 1">
+                    <div class="proj_nom">Missió Espacial</div>
                     <div class="proj_text">Activitat de tutoria per treballar la presa de decisions individuals i en equip davant d'una situació desconeguda. Basat en l'exercici de la NASA</div>
                     <a class="button" href="https://espai.llardeldrac.cat">Veure més</a>
                 </div>
 
                 <div class="projecte">
+                    
                     <img src="https://images.squarespace-cdn.com/content/v1/58338d5d37c58135ee05bb45/1580165775261-KSKR6S96PFI5BJFFJ1BZ/AdobeStock_94905049.jpeg" alt="Foto projecte 1">
+                    <div class="proj_nom">Escape Web</div>
                     <div class="proj_text">Activitat del mòdul de configuració i administració de xarxes on els alumnes han de realitzar una sèrie de configuracions al programa "Packet Tracer" per obtenir els diferents codis necessaris.</div>
-                    <a class="button" href="">Veure més</a>
+                    <a class="button" href="https://llardeldrac.cat/escape/">Veure més</a>
                 </div>
             </div>
         </section>
@@ -81,7 +91,7 @@
                     <div class="afic_icon"><img src="assets/img/game-controller-outline.svg" alt="Jocs de taula"></div>
                 </div>
                 <div class="aficio">
-                    <div class="afic_nom">Aventures gràfiques</div>
+                    <div class="afic_nom">Aventura gràfica</div>
                     <div class="afic_icon"><img src="assets/img/laptop-outline.svg" alt="Aventures gràfiques"></div>
                 </div>
                 <div class="aficio">
