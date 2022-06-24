@@ -164,6 +164,7 @@ section {
 
 #curriculum > div > div {
     padding-left: 5%;
+    padding-right: 5%;
 }
 
 #curriculum h2 {
@@ -186,8 +187,31 @@ section {
     text-decoration: none;
 }
 
+#contenidorDades {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#foto img{
+    height: 150px;
+}
+
 .estudi, .treball{
     padding-bottom: 1.5rem;
+}
+
+.estudi .nom {
+    background-color: #f9d4f8;
+}
+
+.treball .nom {
+    background-color: #f9d4e0;
+}
+
+.descripcio, .lloc {
+    padding-top: 0.5rem;
 }
 
 #idiomes #taula {
