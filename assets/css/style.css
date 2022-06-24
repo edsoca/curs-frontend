@@ -31,7 +31,8 @@ body, html {
     }
 
     #navbar {
-        transition: opacity 1s ease-out;
+        display: flex;
+        transition: opacity 1s ease-in-out, height 1s ease-in;
         opacity: 0;
         height: 0;
     }
@@ -190,12 +191,37 @@ section {
 }
 
 #idiomes #taula {
-    margin: 0 auto;
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#idiomes #taula td {
+#idiomes #taula thead tr {
+    background-color: #005698;
+    color: #ffffff;
     text-align: center;
-  }
+}
+
+#idiomes #taula th,
+#idiomes #taula td {
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#idiomes #taula tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#idiomes #taula tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#idiomes #taula tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
 
 /********************************************/
 /************ CONTACTE.HTML *****************/
@@ -210,6 +236,7 @@ section {
     margin:0 auto;
     font-family: 'Gentium Book Basic', serif;
     font-size: 1.5em;
+    padding-bottom: 10px;
 }
 
 #formulari ::placeholder {
