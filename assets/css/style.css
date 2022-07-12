@@ -220,6 +220,7 @@ section {
     font-size: 0.9em;
     min-width: 300px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 365px;
 }
 
 #idiomes #taula thead tr {
@@ -530,3 +531,29 @@ a.button:hover{
     }
 }
 
+/* el curriculum queda mucho padding en foramto mobile */
+
+@media screen and (max-width: 667px) {
+    #curriculum {
+        margin: 0 16px;
+    }
+
+    #idiomes #taula {
+        width: 100%;
+    }
+}
+
+
+/* estilo de la caja que contiene la tabla en la vista curriculum */
+.idiomes__taula-box {
+    overflow: scroll;
+}
+
+
+
+/* Si no estas usando Sass (https://openwebinars.net/blog/que-es-sass-ventajas-desventajas-y-ejemplos-de-desarrollo)
+deberias tener en un solo sitio todas las media queries y empezar mobile first con 3 tamaños establecidos min-width: 400, 768, 1024 y un extra para TV 1400 px */
+
+/* Veo un abuso de ID, el para aprovechar la cascada de css, las reglas no tienen que ser tan especificas, la mejor opcion es usar clases
+ya sea class functional como tiene boostrap (https://getbootstrap.com/docs/5.2/getting-started/introduction/) o BEM (https://animaticss.com/articulo/que-es-bem-css/) 
+la especifidad se deja para elementos/pseudo-elemento que se pueden acceder directamente como :after, :before, ::placeholder, etc. */
